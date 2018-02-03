@@ -1,0 +1,22 @@
+var frisby = require('frisby'),
+    config = require('../config'),
+    credentials = null;
+frisby.globalSetup({
+    request: {
+        headers: {'Authorization': config.authHeader}
+    }
+});
+try {
+    credentials = require('./credentials');
+}
+catch(ex) {
+    console.error('\033[31m credentials.js file missing.  Copy /web/spec/api/credentials.js.template to /web/spec/api/credentials.js and modify the values as needed.\033[0m');
+}
+module.exports = {
+    frisby        : frisby,
+    domain        : credentials.domain,
+    client        : credentials.client,
+    provider    : credentials.provider,
+    manager        : credentials.manager,
+    admin        : credentials.admin
+};

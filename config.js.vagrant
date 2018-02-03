@@ -1,0 +1,16 @@
+module.exports = {
+	authHeader			: 'RXVnfblJJRNXnh8gApDLkUJXcfcr6u1a',
+	ownerUser			: 'vagrant',
+	ownerGroup			: 'vagrant',
+	url					: 'https://www.selvera.com',
+	env					: 'prod', // (dev|test|prod)
+	host				: 'localhost',
+	port				: 8094,
+	psql				: {
+		address	: 'localhost',
+		db		: 'selvera_hydration',
+		user	: 'selvera_hydration',
+		pass	: 'selvera_hydration',
+		ssl		: true
+	}
+};

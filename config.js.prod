@@ -1,0 +1,17 @@
+module.exports = {
+	authHeader			: 'RXVnfblJJRNXnh8gApDLkUJXcfcr6u1a',
+	deployLocation		: '/var/nodes/web-hydration',
+	ownerUser			: 'node',
+	ownerGroup			: 'node',
+	url					: 'https://www.selvera.com',
+	env					: 'prod', // (dev|test|prod)
+	host				: 'localhost',
+	port				: 8094,
+	psql				: {
+		address	: 'db-east.cakbylv5emyj.us-east-1.rds.amazonaws.com',
+		db		: 'selvera_hydration',
+		user	: 'selvera_hydration',
+		pass	: 'selvera_hydration',
+		ssl		: true
+	}
+};

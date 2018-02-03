@@ -1,0 +1,19 @@
+{
+	"name"					: "hydration",
+	"cwd"					: "/vagrant/nodes/web-hydration",
+	"script"				: "/vagrant/nodes/web-hydration/app/index.js",
+	"error_file"			: "/var/log/nodes/web-hydration/error.log",
+	"out_file"				: "/var/log/nodes/web-hydration/out.log",
+	"instances"				: 1,
+	"min_uptime"			: "200s",
+	"max_restarts"			: 4,
+	"max_memory_restart"	: "300M",
+	"watch"					: true,
+	"merge_logs"			: false,
+	"exec_interpreter"		: "node",
+	"exec_mode"				: "fork",
+	"autorestart"			: true,
+	"env"					: {
+		"NODE_ENV": "development"
+	}
+}

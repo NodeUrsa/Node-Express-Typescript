@@ -1,0 +1,47 @@
+{
+    "name": "web-hydration",
+    "version": "0.3.0",
+    "description": "Selvera hydration Microservice",
+    "main": "index.js",
+    "scripts": {
+        "documentation": "apidoc -i ./app -o ./api_documentation",
+        "test": "node_modules/.bin/jasmine spec/*.spec.js",
+        "ts": "npm run ts:compile && npm run ts:lint",
+        "ts:compile": "node_modules/.bin/tsc",
+        "ts:lint": "node_modules/.bin/tslint -c ./tslint.json -t stylish --project ./tsconfig.json '**/*.ts' -e '**/node_modules/**'",
+        "ts:watch": "node_modules/.bin/tsc --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/selvera/web-hydration.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/selvera/web-hydration/issues"
+    },
+    "homepage": "https://github.com/selvera/web-hydration#readme",
+    "dependencies": {
+        "bunyan": "^1.8.12",
+        "lodash": "^4.17.4",
+        "moment": "^2.10.6",
+        "restify": "^6.2.3",
+        "selvera-pg": "github:selvera/npm-pg#v0.4.0",
+        "selvera-url-versioning": "github:selvera/npm-url-versioning#v0.4.0",
+        "selvera-validation": "github:selvera/npm-validation#v0.3.0"
+    },
+    "devDependencies": {
+        "@types/bunyan": "^1.8.3",
+        "@types/jasmine": "^2.6.2",
+        "@types/lodash": "^4.14.82",
+        "@types/node": "^8.0.47",
+        "@types/pg": "^7.1.5",
+        "@types/restify": "^5.0.6",
+        "apidoc": "^0.17.6",    
+        "frisby": "^2.0.8",
+        "jasmine": "^2.8.0",
+        "selvera-migrations": "github:selvera/npm-migrations#v0.3.2",    
+        "tslint": "^5.8.0",
+        "typescript": "^2.6.1"
+    }
+}
